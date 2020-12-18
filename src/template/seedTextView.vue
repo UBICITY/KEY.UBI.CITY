@@ -13,6 +13,7 @@
           size="5"
           v-model="currentval"
           @keyup.enter="addlabel"
+          @keydown.delete="deletelabel"
           class="input"
           type="text"
         />
@@ -74,6 +75,17 @@ export default {
         this.labelarr.push(this.currentval)
       }
       this.currentval = ''
+    },
+    deletelabel() {
+      var inputValue = this.currentval
+      var inputArray = this.labelarr
+      // 当前无输入字段 且有已经输入的助记词字段 删除最后一个助记词
+      if (inputValue.length === 0) {
+        if (inputArray.length !== 0) {
+          this.labelarr.pop()
+        }
+      }
+      
     }
   }
 }
