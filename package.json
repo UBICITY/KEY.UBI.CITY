@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service serve",
+    "build": "npm run clear &&  vue-cli-service build",
+    "clear": "rimraf ./build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bip39": "^3.0.3",
+    "clipboard": "^2.0.6",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "web3": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
