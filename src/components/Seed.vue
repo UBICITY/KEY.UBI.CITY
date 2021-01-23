@@ -3,7 +3,7 @@
     <div class="eventBox">
       <div class="seedPhraseBox">
         <SeedField class="seedPhrase"
-                   ref="seedField" />
+                  ref="seedField" />
         <button type="button"
                 @click="toPrivateKey"
                 class="seedButton">生成秘钥</button>
@@ -27,17 +27,6 @@
         <p>{{ descInfo2 }}</p>
       </div>
     </div>
-    <!-- <h3>助记词页面使用明细</h3>
-    <p>
-      这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，这里展示固定文案 一堆文案，
-    </p>
-    <h3>输入助记词</h3>
-    <div class="buttonContainer">
-      <button class="onButton"  type="button" @click="toPrivateKey">生成秘钥</button>
-      <button class="onButton"  :data-clipboard-text="privateKey" type="button" @click="copy" id="copy_text">复制秘钥</button>
-    </div>
-    <h3>秘钥</h3>
-      <p>{{ privateKey }}</p> -->
   </div>
 </template>
 
@@ -183,7 +172,7 @@ export default {
         margin-bottom: 23px;
       }
       .sep {
-        width: 56;
+        width: 56px;
         height: 2px;
         background-color: #ffd85a;
         margin-bottom: 34px;
