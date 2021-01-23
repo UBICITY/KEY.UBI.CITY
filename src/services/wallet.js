@@ -13,19 +13,13 @@ export function fromSeedPhrase(seedPhrase) {
   try {
     const restoredKey = mnemonicToEntropy(seedPhrase);
     const privateKey = `0x${restoredKey}`;
-    // && !web3.utils.isHexStrict(privateKey)
     if (!privateKey) {
       throw new Error('Invalid private key');
     }
     return privateKey
   } catch (error) {
-    console.log(error.message)
-    alert(`生成私钥失败,${error.message},请检查助记词输入是否正确`)
-    return '尚未生成'
+    throw new Error(error.message)
   }
-
-  // const { address } = web3.eth.accounts.privateKeyToAccount(privateKey);
-  // return address;
 }
 
 export function toSeedPhrase(privateKey) {
