@@ -6,7 +6,7 @@
                   ref="seedField" />
         <button type="button"
                 @click="toPrivateKey"
-                class="seedButton">生成秘钥</button>
+                class="seedButton">转换为秘钥</button>
       </div>
       <div class="seedPhraseBox">
         <div class="private">{{ privateKey }}</div>
@@ -19,13 +19,13 @@
       </div>
     </div>
     <div class="descBox">
-      <div class="title">助记词使用明细</div>
+      <div class="title">助记词转换工具</div>
       <div class="sep"></div>
-      <div class="desc">
+      <!-- <div class="desc">
         <p>{{ descInfo }}</p>
         <br>
         <p>{{ descInfo2 }}</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
