@@ -72,8 +72,7 @@ export default {
     },
     // input回车加入labelarr中
     addlabel() {
-      let count = this.labelarr.indexOf(this.currentval)
-      if (count === -1 && this.currentval.replace(/\s+/g, "").length !== 0) {
+      if (this.currentval.replace(/\s+/g, "").length !== 0) {
         this.labelarr.push(this.currentval)
       }
       this.currentval = ''
