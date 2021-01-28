@@ -6,7 +6,7 @@
                   ref="seedField" />
         <button type="button"
                 @click="toPrivateKey"
-                class="seedButton">转换为秘钥</button>
+                class="seedButton">转换为私钥</button>
       </div>
       <div class="seedPhraseBox">
         <div class="private">{{ privateKey }}</div>
@@ -15,7 +15,7 @@
                 :disabled="isAble"
                 :data-clipboard-text="privateKey"
                 @click="copy"
-                id="copy_text">复制秘钥</button>
+                id="copy_text">复制私钥</button>
       </div>
     </div>
     <div class="descBox">
@@ -43,14 +43,14 @@ export default {
   data() {
     return {
       labelarr: [],
-      privateKey: '此处生成秘钥',
+      privateKey: '此处生成私钥',
       descInfo: "暂无",
       descInfo2: '暂无'
     }
   },
   computed: {
     isAble() {
-      if (this.privateKey === '此处生成秘钥') {
+      if (this.privateKey === '此处生成私钥') {
         return true
       }
       return false
@@ -77,12 +77,12 @@ export default {
     toPrivateKey() {
       this.labelarr = this.$refs.seedField.labelarr
       if (!this.labelarr || this.labelarr === 'undefined' || this.labelarr.length === 0) {
-        this.privateKey = '此处生成秘钥'
+        this.privateKey = '此处生成私钥'
         alert('请输入助记词')
         return
       }
       if (this.labelarr.length !== 24) {
-        this.privateKey = '此处生成秘钥'
+        this.privateKey = '此处生成私钥'
         alert('助记词应为24个英文单词，请输入正确的格式')
         return
       }
@@ -91,7 +91,7 @@ export default {
         this.privateKey = fromSeedPhrase(SeedPhrase)
         alert(`生成私钥成功`)
       } catch (error) {
-        this.privateKey = '此处生成秘钥'
+        this.privateKey = '此处生成私钥'
         alert(`生成私钥失败,${error.message},请检查助记词输入是否正确`)
       }
     }
