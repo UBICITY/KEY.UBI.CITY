@@ -33,7 +33,6 @@
 <script>
 import SeedField from '../template/seedTextView'
 import Clipboard from 'clipboard';
-// import { toSeedPhrase } from '../services/wallet'
 import { fromSeedPhrase } from '../services/wallet'
 
 export default {
@@ -60,7 +59,6 @@ export default {
   methods: {
     copy() {
       // var _this = this;
-      console.log('zale ')
       var clipboard = new Clipboard('#copy_text');
 
       clipboard.on('success', () => {
@@ -94,7 +92,6 @@ export default {
         alert(`生成私钥成功`)
       } catch (error) {
         this.privateKey = '此处生成秘钥'
-        console.log(error.message)
         alert(`生成私钥失败,${error.message},请检查助记词输入是否正确`)
       }
     }

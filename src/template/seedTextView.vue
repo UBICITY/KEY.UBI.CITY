@@ -48,7 +48,6 @@ export default {
   },
   watch: {
     labelarr(old, cur) {
-      console.log('old=', old, 'cur=', cur)
       this.$emit('on-change', this.labelarr)
     },
     parentarr() {

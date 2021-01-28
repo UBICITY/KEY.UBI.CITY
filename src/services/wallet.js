@@ -1,13 +1,5 @@
-import { mnemonicToEntropy, entropyToMnemonic } from 'bip39';
+import { mnemonicToEntropy } from 'bip39';
 
-// import web3 from './web3'
-
-// export function getKey() {
-//   var xxx = web3.eth.accounts.create();
-//   console.log('xxxx =',xxx)
-//   const { privateKey } = xxx;
-//   return privateKey;
-// }
 
 export function fromSeedPhrase(seedPhrase) {
   try {
@@ -22,6 +14,4 @@ export function fromSeedPhrase(seedPhrase) {
   }
 }
 
-export function toSeedPhrase(privateKey) {
-  return entropyToMnemonic(privateKey.slice(2)).split(' ');
-}
+

@@ -69,6 +69,7 @@ module.exports = {
     //   }
     // },
     if (isProduction) {
+      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
       // gzip压缩配置
       // config.plugins.push(
       //   new CompressionPlugin({
